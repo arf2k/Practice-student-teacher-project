@@ -3,6 +3,9 @@ class Teacher < ActiveRecord::Base
     has_many :assignments
     has_many :students, through: :grade_levels
     has_many :students, through: :assignments 
+    has_many :subjects 
+    has_many :students, through: :subjects
+
 
     def tenure
         if self.years_of_experience > 5
@@ -24,6 +27,5 @@ class Teacher < ActiveRecord::Base
         Assignment.create(student: student, teacher: self, project: project)
     end
 
-    
 
 end
