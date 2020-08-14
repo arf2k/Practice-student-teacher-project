@@ -1,5 +1,5 @@
 class Teacher < ActiveRecord::Base
-    has_many :grade_levels 
+    has_many :grade_levels
     has_many :students, through: :grade_levels
 
     def tenure
@@ -11,12 +11,10 @@ class Teacher < ActiveRecord::Base
     end
 
 
-    def students
-        Student.all.select do |students|
-            students.teacher_id == self.id
-        end
-    end
+    # def students
+    #     Student.all.select do |students|
+    #         students.teacher_id == self.id
+    #     end
+    # end
 
-
-    
 end

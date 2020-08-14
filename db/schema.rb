@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 2020_08_14_140429) do
   create_table "grade_levels", force: :cascade do |t|
     t.integer "student_id"
     t.integer "teacher_id"
-    t.string "grade_level"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "grade"
   end
 
   create_table "teachers", force: :cascade do |t|
