@@ -17,4 +17,9 @@ s4 = Student.create(first_name: "Tom", last_name: "Thomas");
 
 GradeLevel.create(student: s1, teacher: t1);
 GradeLevel.create(student: s2, teacher: t1);
-GradeLevel.create(student: s3, teacher: t1);
+GradeLevel.create(student: s3, teacher: t2);
+
+Assignment.create(student: s1, teacher: t1, project: "science lab")
+Assignment.create(student: s2, teacher: t2, project: "take home quiz")
+Assignment.create(student: s3, teacher: t1, project: "essay")
+Assignment.create(student: s4, teacher: t1, project: "science lab")

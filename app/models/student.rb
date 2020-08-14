@@ -1,6 +1,8 @@
 class Student < ActiveRecord::Base
-    has_many :grade_levels
+    has_many :grade_levels 
+    has_many :assignments
     has_many :teachers, through: :grade_levels 
+    has_many :teachers, through: :assignments
 
 
 def full_name
@@ -14,5 +16,7 @@ def Student.all_in_grade(grade)
             students.grade_level == grade 
         end
     end
+
+    
 
 end

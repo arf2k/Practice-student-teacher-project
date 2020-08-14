@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_140429) do
+ActiveRecord::Schema.define(version: 2020_08_14_150912) do
+
+  create_table "assignments", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "teacher_id"
+    t.string "project"
+  end
 
   create_table "grade_levels", force: :cascade do |t|
     t.integer "student_id"
